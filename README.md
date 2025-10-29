@@ -78,3 +78,30 @@
     "iam_token": "<>"
   }
   ```
+## :boom: Cite us
+If you use our code or paper in your research, please cite
+
+```
+Regina Nasyrova and Alexey Sorokin. 2025. Grammatical Error Correction via Sequence Tagging for Russian. In Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 4: Student Research Workshop), pages 1036–1050, Vienna, Austria. Association for Computational Linguistics.
+```
+or
+```
+@inproceedings{nasyrova-sorokin-2025-grammatical,
+    title = "Grammatical Error Correction via Sequence Tagging for {R}ussian",
+    author = "Nasyrova, Regina  and
+      Sorokin, Alexey",
+    editor = "Zhao, Jin  and
+      Wang, Mingyang  and
+      Liu, Zhu",
+    booktitle = "Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 4: Student Research Workshop)",
+    month = jul,
+    year = "2025",
+    address = "Vienna, Austria",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.acl-srw.82/",
+    doi = "10.18653/v1/2025.acl-srw.82",
+    pages = "1036--1050",
+    ISBN = "979-8-89176-254-1",
+    abstract = "We introduce a modified sequence tagging architecture, proposed in (Omelianchuk et al., 2020), for the Grammatical Error Correction of the Russian language. We propose language-specific operation set and preprocessing algorithm as well as a classification scheme which makes distinct predictions for insertions and other operations. The best versions of our models outperform previous approaches and set new SOTA on the two Russian GEC benchmarks {--} RU-Lang8 and GERA, while achieve competitive performance on RULEC-GEC."
+}
+```
