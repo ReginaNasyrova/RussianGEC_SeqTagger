@@ -51,4 +51,30 @@
   * `N_EPOCHS` -- number of training epochs, the default value is 2
     
 * ## Inference
+  For label prediction, use
+  ```
+  python cls_inference.py -i INPUT_FILE -o OUT_FILE -l LABELS2ID_FILE -B BATCH_SIZE -W WEIGHTS -H HYPERPARAMETERS_CONFIG
+  ```
+  * `INPUT_FILE` -- should be in the preprocessed format.
   
+  If your file is a list of sentences, use `python make_preprocessed.py -i INPUT_FILE -o OUTPUT_FILE` to transform it.
+  * `OUT_FILE` -- by default, "preds" 
+  * `LABELS2ID_FILE` - dictionary of ids mapped to labels
+  * `BATCH_SIZE` -- default=16
+  * `WEIGHTS` -- model weights
+  * `HYPERPARAMETERS_CONFIG` -- the configuration file which is automatically saved as a result of training/finetuning
+* ## Decoding
+  To transform the tokens according to predicted labels, use
+  ```
+  python decode.py -p PREDS_FILE -f FEATS_FILE -o OUT_FILE -J JSON_CONFIG
+  ```
+  * `PREDS_FILE` -- file with predicted labels (the result of model inference)
+  * `FEATS_FILE` -- parsed initial sentences
+  * `OUT_FILE` -- by default, "OUTPUT"
+  * `JSON_CONFIG` -- json configuration file to access YandexGPT model:
+  ```
+  {
+    "folder_id": "<>",
+    "iam_token": "<>"
+  }
+  ```
